@@ -7,7 +7,7 @@
 
 import Foundation
 
-//TODO: Remove when iOS 11 is minimum deployment target
+// TODO: Remove when iOS 11 is minimum deployment target
 public class AndesColorStrategyiOS10: AndesColors {
     public var bgColorPrimary: UIColor = UIColor.Andes.graySolid070
     public var bgColorSecondary: UIColor = UIColor.Andes.graySolid040

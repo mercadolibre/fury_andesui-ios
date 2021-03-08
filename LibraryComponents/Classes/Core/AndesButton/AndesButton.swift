@@ -149,7 +149,7 @@ import UIKit
         view.frame = bounds
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 
-        //accesibility
+        // accesibility
         view.isAccessibilityElement = false
         self.isAccessibilityElement = true
         self.accessibilityTraits = .button

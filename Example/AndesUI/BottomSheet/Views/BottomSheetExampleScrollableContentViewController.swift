@@ -30,7 +30,7 @@ class BottomSheetExampleScrollableContentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "BottomSheetExampleScrollableContentViewController"
+        self.title = "BottomSheetExampleScrollableContent"
         view.backgroundColor = rainbow.last!
 
         let scrollView = buildRainbowView()

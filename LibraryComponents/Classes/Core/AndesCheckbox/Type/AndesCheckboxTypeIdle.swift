@@ -6,7 +6,7 @@
 //
 
 import Foundation
-//Handle checkbox Idle type
+// Handle checkbox Idle type
 class AndesCheckboxTypeIdle: AndesCheckboxTypeProtocol {
     var borderColor: UIColor?
     var borderSize: CGFloat?

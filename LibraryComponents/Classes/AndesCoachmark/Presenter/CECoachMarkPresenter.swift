@@ -86,7 +86,7 @@ class AndesCoachMarkPresenter {
             scrollInteractor?.update(highlightedView: currentStep.view, bodyView: bodyView)
         }
 
-        //If it needs scroll, it will be performed
+        // If it needs scroll, it will be performed
         if let scrollInteractor = scrollInteractor, scrollInteractor.isScrollNeeded() {
             view.removeHighlight()
             hide()

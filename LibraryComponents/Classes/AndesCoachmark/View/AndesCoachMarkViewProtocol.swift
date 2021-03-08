@@ -6,10 +6,10 @@
 //
 
 protocol AndesCoachMarkViewProtocol: class {
-    //Properties
+    // Properties
     var bodyView: UIView? { get }
 
-    //Behaviour
+    // Behaviour
     func show()
     func hide()
     func setHighlight(frame: CGRect, cornerRadius: CGFloat, maskPath: CGPath)
@@ -20,7 +20,7 @@ protocol AndesCoachMarkViewProtocol: class {
     func hideBody()
     func setFooter()
 
-    //Delegate
+    // Delegate
     func showNext(stepIndex: Int)
     func close(stepIndex: Int)
     func exit(withCallback: Bool)

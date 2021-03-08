@@ -6,7 +6,7 @@
 //
 
 import Foundation
-//Used to set the radiobutton status
+// Used to set the radiobutton status
 @objc public enum AndesRadioButtonStatus: Int, AndesEnumStringConvertible {
     case selected
     case unselected

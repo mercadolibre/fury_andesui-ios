@@ -43,9 +43,9 @@ import Foundation
 
     private var tableView: UITableView = UITableView()
     private var internalDataSource: AndesListTableViewDataSource?
-    //swiftlint:disable weak_delegate
+    // swiftlint:disable weak_delegate
     private var internalDelegate: AndesListTableViewDelegate?
-    //swiftlint:enable weak_delegate
+    // swiftlint:enable weak_delegate
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)

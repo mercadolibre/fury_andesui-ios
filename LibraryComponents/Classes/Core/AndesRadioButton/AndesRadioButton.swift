@@ -104,7 +104,7 @@ extension AndesRadioButton: AndesRadioButtonViewDelegate {
                 self.status = .selected
             }
         case .disabled:
-            //Never happen
+            // Never happen
             return
         }
         updateContentView()

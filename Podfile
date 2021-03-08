@@ -15,7 +15,6 @@ target 'AndesUI-demoapp' do
     pod 'AndesUI/AndesDropdown', :path => './'
     pod 'IQKeyboardManagerSwift', '6.5.0'
     pod 'Firebase/Analytics'
-    pod 'Firebase/Crashlytics'
     target 'AndesUI_Tests' do
         inherit! :search_paths
 

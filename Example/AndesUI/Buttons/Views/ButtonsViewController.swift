@@ -75,7 +75,7 @@ class ButtonsViewController: UIViewController {
         spinnersState = .enabled
     }
 
-    @IBAction func ChangeSpinnerState(_ sender: Any) {
+    @IBAction func changeSpinnerState(_ sender: Any) {
         spinnersState.changeSate()
     }
 

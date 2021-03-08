@@ -15,12 +15,12 @@ extension AndesCoachMarkView: AndesCoachMarkViewProtocol {
     func setNavBar(_ title: String, shouldShowExitButton: Bool) {
         navBar.title = title
         navBar.showExitButton = shouldShowExitButton
-        bringSubviewToFront(navBar)     //Workaround porque sino el overlay me afecta la vista
+        bringSubviewToFront(navBar)     // Workaround porque sino el overlay me afecta la vista
         layoutIfNeeded()
     }
 
     func setFooter() {
-        bringSubviewToFront(footer)     //Workaround porque sino el overlay me afecta la vista
+        bringSubviewToFront(footer)     // Workaround porque sino el overlay me afecta la vista
         layoutIfNeeded()
     }
 
@@ -97,7 +97,7 @@ extension AndesCoachMarkView: AndesCoachMarkViewProtocol {
     func setHighlight(frame: CGRect, cornerRadius: CGFloat, maskPath: CGPath) {
         self.maskLayer.path = maskPath
 
-        //I need this for covering the maskLayer so that the animation works.
+        // I need this for covering the maskLayer so that the animation works.
         highlightedView?.hide()
         highlightedView = AndesCoachMarkHighlightedView(frame: frame, cornerRadius: cornerRadius, overlayColor: overlayColor, animated: animated)
 

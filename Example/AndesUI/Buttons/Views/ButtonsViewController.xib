@@ -64,7 +64,7 @@
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZRx-h6-N6Z">
                                             <rect key="frame" x="141.5" y="0.0" width="51" height="31"/>
                                             <connections>
-                                                <action selector="ChangeSpinnerState:" destination="-1" eventType="valueChanged" id="yZZ-oW-HSv"/>
+                                                <action selector="changeSpinnerState:" destination="-1" eventType="valueChanged" id="XbI-dS-cBp"/>
                                             </connections>
                                         </switch>
                                     </subviews>

@@ -49,6 +49,22 @@ class AndesShowcasePageViewController: UIViewController {
         pageController.setViewControllers([controllers.first!], direction: .forward, animated: true, completion: nil)
     }
 
+    private func manageEventTimerWith(action timerAction: TimerAction, for view: String? = nil) {
+        guard
+            let componentName = self.title,
+            let currentVc = (controllers.first?.nibName != nil ) ? controllers.first?.nibName : controllers.first?.title else { return }
+
+        switch timerAction {
+        case .start:
+            analyticsHelper.startTimer(view: view ?? currentVc, for: componentName)
+        case .pause:
+            analyticsHelper.pauseTimer(view: view ?? currentVc, and: componentName)
+        case .stop:
+            analyticsHelper.pauseTimer(view: view ?? currentVc, and: componentName)
+            analyticsHelper.stopTimer(component: componentName)
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPageController()
@@ -64,23 +80,11 @@ class AndesShowcasePageViewController: UIViewController {
             topConstraint.constant = padding + topBarHeight
         }
 
-        guard
-            let componentName = self.title ,
-            let firstControllerName = (controllers.first?.nibName != nil ) ? controllers.first?.nibName : controllers.first?.title
-        else { return }
-
-//        print("\(String(describing: firstControllerName)) in \(componentName)")
-        analyticsHelper.startTimer(view: firstControllerName, for: componentName)
+        manageEventTimerWith(action: .start)
     }
 
     override func viewDidDisappear(_ animated: Bool) {
-        guard
-            let componentName = self.title ,
-            let currentVc = (controllers.first?.nibName != nil ) ? controllers.first?.nibName : controllers.first?.title
-        else { return }
-
-        analyticsHelper.pauseTimer(view: currentVc, and: componentName)
-        analyticsHelper.stopTimer(component: componentName)
+        manageEventTimerWith(action: .stop)
     }
 }
 
@@ -101,14 +105,10 @@ extension AndesShowcasePageViewController: UIPageViewControllerDataSource, UIPag
         pageControl.currentPage = current
 
         guard let firstControllerName = controllers.first?.nibName,
-              let componentName = self.title else { return }
-        analyticsHelper.pauseTimer(view: firstControllerName, and: componentName)
+              let pageContentViewController = pageViewController.viewControllers!.first,
+              let currentController = pageContentViewController.nibName else { return }
 
-        let pageContentViewController = pageViewController.viewControllers!.first!
-
-        guard let currentController = pageContentViewController.nibName else { return }
-
-        analyticsHelper.startTimer(view: currentController, for: componentName)
-        print("\(String(describing: pageContentViewController.nibName!)) in \(componentName)")
+        manageEventTimerWith(action: .pause, for: firstControllerName)
+        manageEventTimerWith(action: .start, for: currentController)
     }
 }

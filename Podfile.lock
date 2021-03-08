@@ -1,16 +1,16 @@
 PODS:
-  - AndesUI (3.21.1):
-    - AndesUI/Core (= 3.21.1)
-  - AndesUI/AndesBottomSheet (3.21.1):
+  - AndesUI (3.23.2):
+    - AndesUI/Core (= 3.23.2)
+  - AndesUI/AndesBottomSheet (3.23.2):
     - AndesUI/Core
-  - AndesUI/AndesCoachmark (3.21.1):
+  - AndesUI/AndesCoachmark (3.23.2):
     - AndesUI/Core
-  - AndesUI/AndesDropdown (3.21.1):
+  - AndesUI/AndesDropdown (3.23.2):
     - AndesUI/AndesBottomSheet
     - AndesUI/Core
-  - AndesUI/Core (3.21.1):
+  - AndesUI/Core (3.23.2):
     - AndesUI/LocalIcons
-  - AndesUI/LocalIcons (3.21.1)
+  - AndesUI/LocalIcons (3.23.2)
   - Firebase/Analytics (7.7.0):
     - Firebase/Core
   - Firebase/Core (7.7.0):
@@ -18,9 +18,6 @@ PODS:
     - FirebaseAnalytics (= 7.7.0)
   - Firebase/CoreOnly (7.7.0):
     - FirebaseCore (= 7.7.0)
-  - Firebase/Crashlytics (7.7.0):
-    - Firebase/CoreOnly
-    - FirebaseCrashlytics (~> 7.7.0)
   - FirebaseAnalytics (7.7.0):
     - FirebaseCore (~> 7.0)
     - FirebaseInstallations (~> 7.0)
@@ -39,12 +36,6 @@ PODS:
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/Logger (~> 7.0)
     - nanopb (~> 2.30907.0)
-  - FirebaseCrashlytics (7.7.0):
-    - FirebaseCore (~> 7.0)
-    - FirebaseInstallations (~> 7.0)
-    - GoogleDataTransport (~> 8.0)
-    - nanopb (~> 2.30907.0)
-    - PromisesObjC (~> 1.2)
   - FirebaseInstallations (7.7.0):
     - FirebaseCore (~> 7.0)
     - GoogleUtilities/Environment (~> 7.0)
@@ -93,7 +84,6 @@ DEPENDENCIES:
   - AndesUI/AndesCoachmark (from `./`)
   - AndesUI/AndesDropdown (from `./`)
   - Firebase/Analytics
-  - Firebase/Crashlytics
   - IQKeyboardManagerSwift (= 6.5.0)
   - Nimble (~> 7.3.0)
   - Quick (~> 1.2.0)
@@ -104,7 +94,6 @@ SPEC REPOS:
     - FirebaseAnalytics
     - FirebaseCore
     - FirebaseCoreDiagnostics
-    - FirebaseCrashlytics
     - FirebaseInstallations
     - GoogleAppMeasurement
     - GoogleDataTransport
@@ -120,12 +109,11 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  AndesUI: 75a9a8927e513f471f95b4a1253ee608b87e2099
+  AndesUI: ab43e6f9608142e7edf9f6c9158fe0b69974b8c0
   Firebase: cd2ab85eec8170dc260186159f21072ecb679ad5
   FirebaseAnalytics: f3f8f75de34fe04141a69bb1c4bd7e24a80178e1
   FirebaseCore: ac35d680a0bf32319a59966a1478e0741536b97b
   FirebaseCoreDiagnostics: 179bf3831213451c8addd036aca7fcf5492ec154
-  FirebaseCrashlytics: 47af228115805e190b566db12c028263531b8ce0
   FirebaseInstallations: 42c86e7b02ff75b7f27f85833bf5dcb5f38a9774
   GoogleAppMeasurement: 0c3b134b2c0a90c4c24833873894bfe0e42a0384
   GoogleDataTransport: 1024b1a4dfbd7a0e92cb20d7e0a6f1fb66b449a4
@@ -136,6 +124,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
 
-PODFILE CHECKSUM: 10fb1ec1458da6cb0b31944a108cf9dbad55bcd9
+PODFILE CHECKSUM: 12d21e5c589acc20ba61b114916a41acf0cabcfe
 
 COCOAPODS: 1.10.1

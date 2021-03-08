@@ -76,7 +76,7 @@ extension AndesCoachMarkHighlightedView {
     }
 
     func hide() {
-        //This is not animated because of simplicity!
+        // This is not animated because of simplicity!
         removeFromSuperview()
     }
 }

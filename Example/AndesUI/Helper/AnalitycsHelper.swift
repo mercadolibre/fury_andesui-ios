@@ -9,23 +9,21 @@
 import Foundation
 import FirebaseAnalytics
 
+enum TimerAction {
+    case start
+    case pause
+    case stop
+}
+
 class AnalyticsHelper {
 
-    var screensAndTimers =  [String: Date]()
-    var componentsDates = [String: [String: Date]]()
-    var screensAndSeconds = [String: TimeInterval]()
-    var componentsSeconds = [String: [String: TimeInterval]]()
+    private var screensAndTimers =  [String: Date]()
+    private var componentsDates = [String: [String: Date]]()
+    private var screensAndSeconds = [String: TimeInterval]()
+    private var componentsSeconds = [String: [String: TimeInterval]]()
 
-    func startTimer(view: String, for component: String) {
-        var screen = ""
-
-        if view == "" {
-            screen = AnalyticsEventScreenView
-        } else {
-            screen = view
-        }
-
-        screensAndTimers[screen] = Date()
+    func startTimer(view: String?, for component: String) {
+        screensAndTimers[view ?? AnalyticsEventScreenView] = Date()
         componentsDates[component] = screensAndTimers
     }
 
@@ -53,8 +51,8 @@ class AnalyticsHelper {
             let date = screenDates.value
             var currentSeconds = Date().timeIntervalSince(date)
 
-            if currentComponentSeconds[screen] != nil {
-                currentSeconds += currentComponentSeconds[screen]!
+            if let currentScreen = currentComponentSeconds[screen] {
+                currentSeconds += currentScreen
             }
 
             viewAndSeconds[screen] = currentSeconds
@@ -64,8 +62,6 @@ class AnalyticsHelper {
     }
 
     func sendTrack(component: String, viewsAndSeconds: [String: TimeInterval]) {
-        print("\(component) -> \(viewsAndSeconds)")
-//        print("nombre componente: \(component)")
-//        Analytics.logEvent(component, parameters: viewsAndSeconds)
+        Analytics.logEvent(component, parameters: viewsAndSeconds)
     }
 }

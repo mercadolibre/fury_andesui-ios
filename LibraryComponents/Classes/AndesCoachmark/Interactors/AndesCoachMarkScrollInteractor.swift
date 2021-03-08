@@ -24,7 +24,7 @@ class AndesCoachMarkScrollInteractor {
         self.margin = margin
         self.animated = animated
 
-        //Keep this for restoring
+        // Keep this for restoring
         contentOffset = scrollView.contentOffset
     }
 
@@ -45,13 +45,13 @@ class AndesCoachMarkScrollInteractor {
         let rect = bodyViewContentSize + highlightedViewConverted
         let rectWithMargin = CGRect(x: 0, y: rect.minY - (rect.isAbove(of: bodyView.bounds) ? margin : 0), width: 0, height: rect.height + (rect.isAbove(of: bodyView.bounds) || rect.isBelow(of: bodyView.bounds) ? margin : 0))
 
-        //Make sure that the rect fit on body view. if it doesn't, it doesn't have scrolling!
+        // Make sure that the rect fit on body view. if it doesn't, it doesn't have scrolling!
         return !bodyView.bounds.contains(rectWithMargin) && (bodyView.bounds.height >= (bodyViewContentSize.height + highlightedViewConverted.height))
     }
 
     func scrollIfNeeded(completion: (() -> Void)? = nil) {
-        //If coachmark is partially invisible at least, I need to scroll
-        //If coachmark is visible and referenceview is uncompletely visible I need to scroll as much as posible without hiding the coachmark
+        // If coachmark is partially invisible at least, I need to scroll
+        // If coachmark is visible and referenceview is uncompletely visible I need to scroll as much as posible without hiding the coachmark
 
         guard let bodyViewContentSize = (bodyView.subviews.reduce(nil) { (rect, subview) -> CGRect in
             return (rect ?? subview.frame) + subview.frame
@@ -94,7 +94,7 @@ class AndesCoachMarkScrollInteractor {
             return
         }
 
-        //Otherwise I don't need to scroll
+        // Otherwise I don't need to scroll
         completion?()
         return
     }

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-//Used to set the radioButton align
+// Used to set the radioButton align
 @objc public enum AndesRadioButtonAlign: Int, AndesEnumStringConvertible {
     case left
     case right

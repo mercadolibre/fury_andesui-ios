@@ -17,7 +17,7 @@ class AndesCoachMarkBodyPresenter {
     }
 
     func viewLaidOut() {
-        //I want to do this once
+        // I want to do this once
         if !firstLayout { return }
         firstLayout = false
 

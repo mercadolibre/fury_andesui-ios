@@ -97,7 +97,7 @@ extension AndesCheckbox: AndesCheckboxViewDelegate {
                 self.status = .selected
             }
         case .disabled:
-            //Never happen
+            // Never happen
             return
         }
         updateContentView()
