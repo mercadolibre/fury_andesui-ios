@@ -11,7 +11,7 @@ import UIKit
 class BottomSheetRouter: HomeRouterProtocol {
     func route(from: UIViewController) {
         let viewController = AndesShowcasePageViewController(controllers: [BottomSheetSwiftExampleViewController(), BottomSheetObjectiveCExampleViewController()])
-        viewController.title = "Bottom Sheet"
+        viewController.title = "AndesBottomSheet"
         from.navigationController?.pushViewController(viewController, animated: true)
     }
 }

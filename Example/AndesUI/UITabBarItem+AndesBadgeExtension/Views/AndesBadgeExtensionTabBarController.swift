@@ -11,7 +11,7 @@ import AndesUI
 
 final class AndesBadgeExtensionTabBarController: UITabBarController {
     init() {
-        super.init(nibName: nil, bundle: nil)
+        super.init(nibName: "AndesBadgeExtensionTabBarController", bundle: nil)
     }
 
     required init?(coder: NSCoder) {

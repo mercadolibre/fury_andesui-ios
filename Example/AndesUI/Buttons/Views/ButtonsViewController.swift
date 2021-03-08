@@ -40,6 +40,7 @@ class ButtonsViewController: UIViewController {
     @IBOutlet var smallWithSpinnerAndesButton: [AndesButton] = []
 
     @IBOutlet weak var largeWithIconSpinner: AndesButton!
+    @IBOutlet weak var switchStateLabel: UILabel!
 
     var rightBarButton: UIBarButtonItem!
 
@@ -61,9 +62,9 @@ class ButtonsViewController: UIViewController {
         func getTransitionStateName() -> String {
             switch self {
             case .enabled:
-                return "Disabled Spinner"
-            case .disabled:
                 return "Enabled Spinner"
+            case .disabled:
+                return "Disabled Spinner"
             }
         }
     }
@@ -71,21 +72,10 @@ class ButtonsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        setupSpinnerCases()
         spinnersState = .enabled
     }
 
-    private func setupSpinnerCases() {
-        rightBarButton = UIBarButtonItem(
-            image: nil,
-            style: .plain,
-            target: self,
-            action: #selector(changeStateButtonTapped)
-        )
-        navigationItem.rightBarButtonItem = rightBarButton
-    }
-
-    @objc func changeStateButtonTapped() {
+    @IBAction func ChangeSpinnerState(_ sender: Any) {
         spinnersState.changeSate()
     }
 
@@ -115,7 +105,7 @@ class ButtonsViewController: UIViewController {
 
     func changeSpinnerState(state: SpinnerState) {
 
-        rightBarButton.title = state.getTransitionStateName()
+        switchStateLabel.text = state.getTransitionStateName()
 
         switch state {
         case .enabled:

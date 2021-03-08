@@ -11,6 +11,8 @@ import UIKit
 
 class ProgressIndicatorRouter: HomeRouterProtocol {
     func route(from: UIViewController) {
-        from.navigationController?.pushViewController(ProgressIndicatorViewController(), animated: true)
+        let viewController = AndesShowcasePageViewController(controllers: [ProgressIndicatorViewController(), ProgressIndicatorObjcViewController()])
+        viewController.title = "AndesPogressindicator"
+        from.navigationController?.pushViewController(viewController, animated: true)
     }
 }

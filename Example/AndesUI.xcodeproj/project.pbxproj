@@ -74,8 +74,6 @@
 		8634C9E824AB774700DB7B9F /* SnackbarObjCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8634C9E624AB774700DB7B9F /* SnackbarObjCViewController.m */; };
 		8634C9E924AB774700DB7B9F /* SnackbarObjCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8634C9E724AB774700DB7B9F /* SnackbarObjCViewController.xib */; };
 		86A1E3042481599500B59D1D /* TagRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A1E3032481599500B59D1D /* TagRouter.swift */; };
-		86A1E30824815A1700B59D1D /* AndesTagShowcaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A1E30624815A1700B59D1D /* AndesTagShowcaseViewController.swift */; };
-		86A1E30924815A1700B59D1D /* AndesTagShowcaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86A1E30724815A1700B59D1D /* AndesTagShowcaseViewController.xib */; };
 		86A1E30C24815CBA00B59D1D /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A1E30A24815CBA00B59D1D /* TagViewController.swift */; };
 		86A1E30D24815CBA00B59D1D /* TagViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86A1E30B24815CBA00B59D1D /* TagViewController.xib */; };
 		86A1E3112481E56300B59D1D /* TagObjCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A1E30F2481E56300B59D1D /* TagObjCViewController.m */; };
@@ -85,8 +83,6 @@
 		86E0A4C2249415CE003D338C /* UITestTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E0A4C1249415CE003D338C /* UITestTag.swift */; };
 		8C516F4A20314AC722787DA8 /* Pods_AndesUI_demoapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FCEF5353DCB79147551C7D /* Pods_AndesUI_demoapp.framework */; };
 		90530B07242BF9ED005E056A /* BadgesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90530B06242BF9ED005E056A /* BadgesRouter.swift */; };
-		90530B0B242BFAA7005E056A /* AndesBadgeShowcaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90530B09242BFAA7005E056A /* AndesBadgeShowcaseViewController.swift */; };
-		90530B0C242BFAA7005E056A /* AndesBadgeShowcaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90530B0A242BFAA7005E056A /* AndesBadgeShowcaseViewController.xib */; };
 		90530B11242BFD15005E056A /* BadgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90530B0F242BFD15005E056A /* BadgeViewController.swift */; };
 		90530B12242BFD15005E056A /* BadgeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90530B10242BFD15005E056A /* BadgeViewController.xib */; };
 		90F4781F243534F0001CEC90 /* BadgeObjCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F4781D243534F0001CEC90 /* BadgeObjCViewController.m */; };
@@ -134,6 +130,8 @@
 		E212FF9C25D44C3300F2AEE0 /* TooltipActionUseCase.xib in Resources */ = {isa = PBXBuildFile; fileRef = E212FF9B25D44C3300F2AEE0 /* TooltipActionUseCase.xib */; };
 		E212FFA125D44C4200F2AEE0 /* TooltipActionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E212FFA025D44C4200F2AEE0 /* TooltipActionUseCase.swift */; };
 		E212FFB025D487B700F2AEE0 /* TooltipActionLightUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E212FFAF25D487B400F2AEE0 /* TooltipActionLightUseCase.swift */; };
+		DA3FB08D25D6DC8C00681116 /* AnalitycsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3FB08C25D6DC8C00681116 /* AnalitycsHelper.swift */; };
+		DA3FB0A325DB033700681116 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA3FB0A225DB033700681116 /* GoogleService-Info.plist */; };
 		E230FDC12580F71800D6ED78 /* ProgressIndicatorObjcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E230FDBF2580F71800D6ED78 /* ProgressIndicatorObjcViewController.m */; };
 		E230FDC22580F71800D6ED78 /* ProgressIndicatorObjcViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E230FDC02580F71800D6ED78 /* ProgressIndicatorObjcViewController.xib */; };
 		E2661E7025DEFFA80050D375 /* DropDownProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2661E6F25DEFFA80050D375 /* DropDownProxy.swift */; };
@@ -177,8 +175,6 @@
 		F85E051E24AF68150059C6FA /* RadioButtonObjCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F85E051D24AF68150059C6FA /* RadioButtonObjCViewController.m */; };
 		F85E052024AF69B20059C6FA /* RadioButtonObjCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F85E051F24AF69B20059C6FA /* RadioButtonObjCViewController.xib */; };
 		F85E052324AF79900059C6FA /* AndesRadioButtonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E052124AF756B0059C6FA /* AndesRadioButtonTest.swift */; };
-		F899354124A0DA98004BC82D /* AndesCheckboxShowcaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F899354024A0DA98004BC82D /* AndesCheckboxShowcaseViewController.swift */; };
-		F899354324A0DADB004BC82D /* AndesCheckboxShowcaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F899354224A0DADB004BC82D /* AndesCheckboxShowcaseViewController.xib */; };
 		F899354524A0EC7B004BC82D /* CheckboxObjCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F899354424A0EC7B004BC82D /* CheckboxObjCViewController.m */; };
 		F899354824A0EE22004BC82D /* CheckboxObjCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F899354724A0EE22004BC82D /* CheckboxObjCViewController.xib */; };
 		F8C3694F24A62E9D00B93DAC /* AndesCheckboxInitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8C3694E24A62E9D00B93DAC /* AndesCheckboxInitViewController.xib */; };
@@ -289,8 +285,6 @@
 		8634C9E624AB774700DB7B9F /* SnackbarObjCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnackbarObjCViewController.m; sourceTree = "<group>"; };
 		8634C9E724AB774700DB7B9F /* SnackbarObjCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SnackbarObjCViewController.xib; sourceTree = "<group>"; };
 		86A1E3032481599500B59D1D /* TagRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagRouter.swift; sourceTree = "<group>"; };
-		86A1E30624815A1700B59D1D /* AndesTagShowcaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndesTagShowcaseViewController.swift; sourceTree = "<group>"; };
-		86A1E30724815A1700B59D1D /* AndesTagShowcaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AndesTagShowcaseViewController.xib; sourceTree = "<group>"; };
 		86A1E30A24815CBA00B59D1D /* TagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
 		86A1E30B24815CBA00B59D1D /* TagViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagViewController.xib; sourceTree = "<group>"; };
 		86A1E30E2481E56300B59D1D /* TagObjCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TagObjCViewController.h; sourceTree = "<group>"; };
@@ -300,8 +294,6 @@
 		86E0A35C2493BDA9003D338C /* AndesTagSimpleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndesTagSimpleTests.swift; sourceTree = "<group>"; };
 		86E0A4C1249415CE003D338C /* UITestTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestTag.swift; sourceTree = "<group>"; };
 		90530B06242BF9ED005E056A /* BadgesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesRouter.swift; sourceTree = "<group>"; };
-		90530B09242BFAA7005E056A /* AndesBadgeShowcaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndesBadgeShowcaseViewController.swift; sourceTree = "<group>"; };
-		90530B0A242BFAA7005E056A /* AndesBadgeShowcaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AndesBadgeShowcaseViewController.xib; sourceTree = "<group>"; };
 		90530B0F242BFD15005E056A /* BadgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeViewController.swift; sourceTree = "<group>"; };
 		90530B10242BFD15005E056A /* BadgeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BadgeViewController.xib; sourceTree = "<group>"; };
 		90F4781C243534F0001CEC90 /* BadgeObjCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BadgeObjCViewController.h; sourceTree = "<group>"; };
@@ -324,7 +316,7 @@
 		9CAD81E723FD62C900D43EB9 /* AndesIconsProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndesIconsProviderTests.swift; sourceTree = "<group>"; };
 		9CB172932422518C00B61431 /* AndesShowcasePageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AndesShowcasePageViewController.xib; sourceTree = "<group>"; };
 		9CD1071C23EDF3A90081232D /* UIView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
-		9CD1072A23F1E7AB0081232D /* MessagesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesRouter.swift; path = Routers/MessagesRouter.swift; sourceTree = "<group>"; };
+		9CD1072A23F1E7AB0081232D /* MessagesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesRouter.swift; sourceTree = "<group>"; };
 		9CE112DA23CE587B0017B770 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		9CE112DC23CE58910017B770 /* MessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
 		9CE112ED23D103080017B770 /* AndesButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AndesButtonTests.swift; sourceTree = "<group>"; };
@@ -359,6 +351,8 @@
 		E212FF9B25D44C3300F2AEE0 /* TooltipActionUseCase.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TooltipActionUseCase.xib; sourceTree = "<group>"; };
 		E212FFA025D44C4200F2AEE0 /* TooltipActionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooltipActionUseCase.swift; sourceTree = "<group>"; };
 		E212FFAF25D487B400F2AEE0 /* TooltipActionLightUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooltipActionLightUseCase.swift; sourceTree = "<group>"; };
+		DA3FB08C25D6DC8C00681116 /* AnalitycsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalitycsHelper.swift; sourceTree = "<group>"; };
+		DA3FB0A225DB033700681116 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E230FDBE2580F71800D6ED78 /* ProgressIndicatorObjcViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressIndicatorObjcViewController.h; sourceTree = "<group>"; };
 		E230FDBF2580F71800D6ED78 /* ProgressIndicatorObjcViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProgressIndicatorObjcViewController.m; sourceTree = "<group>"; };
 		E230FDC02580F71800D6ED78 /* ProgressIndicatorObjcViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressIndicatorObjcViewController.xib; sourceTree = "<group>"; };
@@ -416,8 +410,6 @@
 		F85E051D24AF68150059C6FA /* RadioButtonObjCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadioButtonObjCViewController.m; sourceTree = "<group>"; };
 		F85E051F24AF69B20059C6FA /* RadioButtonObjCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RadioButtonObjCViewController.xib; sourceTree = "<group>"; };
 		F85E052124AF756B0059C6FA /* AndesRadioButtonTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndesRadioButtonTest.swift; sourceTree = "<group>"; };
-		F899354024A0DA98004BC82D /* AndesCheckboxShowcaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndesCheckboxShowcaseViewController.swift; sourceTree = "<group>"; };
-		F899354224A0DADB004BC82D /* AndesCheckboxShowcaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AndesCheckboxShowcaseViewController.xib; sourceTree = "<group>"; };
 		F899354424A0EC7B004BC82D /* CheckboxObjCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckboxObjCViewController.m; sourceTree = "<group>"; };
 		F899354724A0EE22004BC82D /* CheckboxObjCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckboxObjCViewController.xib; sourceTree = "<group>"; };
 		F899354924A0FAD0004BC82D /* CheckboxObjCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckboxObjCViewController.h; sourceTree = "<group>"; };
@@ -456,7 +448,7 @@
 		023ADCE124ACC26D0076C3F3 /* Thumbnail */ = {
 			isa = PBXGroup;
 			children = (
-				023ADCE224ACC2930076C3F3 /* ThumbnailRouter.swift */,
+				DAE90A1C25E954CB00CFC91A /* Router */,
 				023ADCE424ACCD010076C3F3 /* Views */,
 			);
 			path = Thumbnail;
@@ -516,7 +508,7 @@
 		4905899F24BE38240044FD0B /* Card */ = {
 			isa = PBXGroup;
 			children = (
-				490589A024BE3C440044FD0B /* CardRouter.swift */,
+				DAE90A1725E9544B00CFC91A /* Routers */,
 				490589A224BE3C800044FD0B /* Views */,
 			);
 			path = Card;
@@ -561,6 +553,7 @@
 		607FACD21AFB9204008FA782 /* Example for AndesUI */ = {
 			isa = PBXGroup;
 			children = (
+				DA3FB08B25D6DC7700681116 /* Helper */,
 				BADFA67E25CB431300165DFE /* UITabBarItem+AndesBadgeExtension */,
 				E201BF4525BB507000D48937 /* Tooltip */,
 				E2C015772575D218001B89C3 /* ProgressIndicator */,
@@ -735,7 +728,7 @@
 		6D2152E7241BCC20001CEA8D /* TextFields */ = {
 			isa = PBXGroup;
 			children = (
-				6D2152E8241BCC65001CEA8D /* TextFieldsRouter.swift */,
+				DAE90A1B25E954B800CFC91A /* Router */,
 				6D2152EA241BCCF4001CEA8D /* Views */,
 			);
 			path = TextFields;
@@ -836,8 +829,8 @@
 		8617BD152499B5750071319C /* Snackbar */ = {
 			isa = PBXGroup;
 			children = (
+				DAE90A1A25E954A600CFC91A /* Router */,
 				8617BD182499B5BC0071319C /* Views */,
-				8617BD162499B5860071319C /* SnackbarRouter.swift */,
 			);
 			path = Snackbar;
 			sourceTree = "<group>";
@@ -866,8 +859,8 @@
 		86A1E3022481596C00B59D1D /* Tag */ = {
 			isa = PBXGroup;
 			children = (
+				DA9CB7CA25E6AF6C00FF5F5A /* Router */,
 				86A1E305248159E800B59D1D /* Views */,
-				86A1E3032481599500B59D1D /* TagRouter.swift */,
 			);
 			path = Tag;
 			sourceTree = "<group>";
@@ -875,8 +868,6 @@
 		86A1E305248159E800B59D1D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				86A1E30624815A1700B59D1D /* AndesTagShowcaseViewController.swift */,
-				86A1E30724815A1700B59D1D /* AndesTagShowcaseViewController.xib */,
 				86A1E30A24815CBA00B59D1D /* TagViewController.swift */,
 				86A1E30B24815CBA00B59D1D /* TagViewController.xib */,
 				86A1E30E2481E56300B59D1D /* TagObjCViewController.h */,
@@ -901,8 +892,8 @@
 		90530B05242BF9D9005E056A /* Badges */ = {
 			isa = PBXGroup;
 			children = (
+				DA9CB7BF25E6AD8C00FF5F5A /* Router */,
 				90530B08242BFA7E005E056A /* Views */,
-				90530B06242BF9ED005E056A /* BadgesRouter.swift */,
 			);
 			path = Badges;
 			sourceTree = "<group>";
@@ -910,8 +901,6 @@
 		90530B08242BFA7E005E056A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				90530B09242BFAA7005E056A /* AndesBadgeShowcaseViewController.swift */,
-				90530B0A242BFAA7005E056A /* AndesBadgeShowcaseViewController.xib */,
 				90530B0F242BFD15005E056A /* BadgeViewController.swift */,
 				90530B10242BFD15005E056A /* BadgeViewController.xib */,
 				90F4781C243534F0001CEC90 /* BadgeObjCViewController.h */,
@@ -963,7 +952,7 @@
 		9CE112D923CE58590017B770 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
-				9CD1072A23F1E7AB0081232D /* MessagesRouter.swift */,
+				DAE90A1825E9548500CFC91A /* Router */,
 				9CE112EA23D0FAD30017B770 /* Views */,
 			);
 			path = Messages;
@@ -1128,6 +1117,106 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		DA3FB08B25D6DC7700681116 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				DA3FB08C25D6DC8C00681116 /* AnalitycsHelper.swift */,
+				DA3FB0A225DB033700681116 /* GoogleService-Info.plist */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		DA9CB7A425E5BC5100FF5F5A /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				E662DEB0254B300900A86D10 /* BottomSheetRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		DA9CB7A525E5BC5A00FF5F5A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E662DEB2254B305100A86D10 /* BottomSheetSwiftExampleViewController.swift */,
+				E662DEB4254B308D00A86D10 /* BottomSheetObjectiveCExampleViewController.h */,
+				E662DEB5254B308D00A86D10 /* BottomSheetObjectiveCExampleViewController.m */,
+				E662DECC2551B81100A86D10 /* BottomSheetExampleScrollableContentViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DA9CB7BF25E6AD8C00FF5F5A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				90530B06242BF9ED005E056A /* BadgesRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DA9CB7C325E6AEC200FF5F5A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				F830F882249400020043D5AF /* CheckboxRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DA9CB7CA25E6AF6C00FF5F5A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				86A1E3032481599500B59D1D /* TagRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DAE90A1725E9544B00CFC91A /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				490589A024BE3C440044FD0B /* CardRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		DAE90A1825E9548500CFC91A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9CD1072A23F1E7AB0081232D /* MessagesRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DAE90A1925E9549700CFC91A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				F8249D0424ABC9AD002A6456 /* RadioButtonRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DAE90A1A25E954A600CFC91A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				8617BD162499B5860071319C /* SnackbarRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DAE90A1B25E954B800CFC91A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				6D2152E8241BCC65001CEA8D /* TextFieldsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DAE90A1C25E954CB00CFC91A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				023ADCE224ACC2930076C3F3 /* ThumbnailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		E2C015772575D218001B89C3 /* ProgressIndicator */ = {
 			isa = PBXGroup;
 			children = (
@@ -1160,11 +1249,8 @@
 		E662DEAF254B2F7000A86D10 /* BottomSheet */ = {
 			isa = PBXGroup;
 			children = (
-				E662DEB0254B300900A86D10 /* BottomSheetRouter.swift */,
-				E662DEB2254B305100A86D10 /* BottomSheetSwiftExampleViewController.swift */,
-				E662DEB4254B308D00A86D10 /* BottomSheetObjectiveCExampleViewController.h */,
-				E662DEB5254B308D00A86D10 /* BottomSheetObjectiveCExampleViewController.m */,
-				E662DECC2551B81100A86D10 /* BottomSheetExampleScrollableContentViewController.swift */,
+				DA9CB7A525E5BC5A00FF5F5A /* Views */,
+				DA9CB7A425E5BC5100FF5F5A /* Routers */,
 			);
 			path = BottomSheet;
 			sourceTree = "<group>";
@@ -1246,8 +1332,8 @@
 		F8249D0324ABC98D002A6456 /* RadioButton */ = {
 			isa = PBXGroup;
 			children = (
+				DAE90A1925E9549700CFC91A /* Router */,
 				F8249D0624ABCA3B002A6456 /* Views */,
-				F8249D0424ABC9AD002A6456 /* RadioButtonRouter.swift */,
 			);
 			path = RadioButton;
 			sourceTree = "<group>";
@@ -1267,8 +1353,8 @@
 		F830F8802493FEEF0043D5AF /* Checkbox */ = {
 			isa = PBXGroup;
 			children = (
+				DA9CB7C325E6AEC200FF5F5A /* Router */,
 				F830F8812493FFDB0043D5AF /* Views */,
-				F830F882249400020043D5AF /* CheckboxRouter.swift */,
 			);
 			path = Checkbox;
 			sourceTree = "<group>";
@@ -1278,8 +1364,6 @@
 			children = (
 				F830F884249400760043D5AF /* AndesCheckboxViewController.swift */,
 				F830F8862494127C0043D5AF /* AndesCheckboxViewController.xib */,
-				F899354024A0DA98004BC82D /* AndesCheckboxShowcaseViewController.swift */,
-				F899354224A0DADB004BC82D /* AndesCheckboxShowcaseViewController.xib */,
 				F899354424A0EC7B004BC82D /* CheckboxObjCViewController.m */,
 				F899354724A0EE22004BC82D /* CheckboxObjCViewController.xib */,
 				F899354924A0FAD0004BC82D /* CheckboxObjCViewController.h */,
@@ -1301,6 +1385,7 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				90D5C6A5459BB80D87CAFA6C /* [CP] Embed Pods Frameworks */,
+				DA18DC5425ED3DDF0040393B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1416,11 +1501,11 @@
 				6A186A6A23AC0FBB00420556 /* ButtonsViewController.xib in Resources */,
 				9C9B5A9023ECEED40007234B /* WhatsNewViewController.xib in Resources */,
 				6D87741B2523D13900C74B83 /* TagChoiceObjCViewController.xib in Resources */,
-				90530B0C242BFAA7005E056A /* AndesBadgeShowcaseViewController.xib in Resources */,
 				9C9B5A9223ECF2120007234B /* CHANGELOG.md in Resources */,
 				E2C0157F2575D467001B89C3 /* ProgressIndicatorViewController.xib in Resources */,
 				490589A624BE3CA70044FD0B /* CardViewController.xib in Resources */,
 				0323A415256085A2001A480F /* DatePickerViewController.xib in Resources */,
+				DA3FB0A325DB033700681116 /* GoogleService-Info.plist in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				9CA28813244761F200E299C3 /* TextAreaViewController.xib in Resources */,
 				9CE112DD23CE58910017B770 /* MessageViewController.xib in Resources */,
@@ -1442,10 +1527,8 @@
 				E201BF4925BB508E00D48937 /* TooltipViewController.xib in Resources */,
 				E2CA668425E5348200D3B0F0 /* TooltipObjcViewController.xib in Resources */,
 				9CE112FD23D20B0E0017B770 /* MessageObjCViewController.xib in Resources */,
-				86A1E30924815A1700B59D1D /* AndesTagShowcaseViewController.xib in Resources */,
 				86A1E3122481E56300B59D1D /* TagObjCViewController.xib in Resources */,
 				9CB172942422518C00B61431 /* AndesShowcasePageViewController.xib in Resources */,
-				F899354324A0DADB004BC82D /* AndesCheckboxShowcaseViewController.xib in Resources */,
 				6D2152F9241C1210001CEA8D /* TextFieldViewController.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				F05BF6AA257551F600F325E0 /* DropDownObjcViewController.xib in Resources */,
@@ -1478,12 +1561,28 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AndesUI-demoapp/Pods-AndesUI-demoapp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AndesUI/AndesUI.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCrashlytics/FirebaseCrashlytics.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseInstallations/FirebaseInstallations.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleDataTransport/GoogleDataTransport.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AndesUI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreDiagnostics.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCrashlytics.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseInstallations.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDataTransport.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1532,6 +1631,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DA18DC5425ED3DDF0040393B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
 		F46F4E4749A35D208F12C969 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1562,6 +1678,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D2152E9241BCC65001CEA8D /* TextFieldsRouter.swift in Sources */,
+				DA3FB08D25D6DC8C00681116 /* AnalitycsHelper.swift in Sources */,
 				E2773F1625D6136F0081E891 /* TooltipActionHighlightCase.swift in Sources */,
 				F899354524A0EC7B004BC82D /* CheckboxObjCViewController.m in Sources */,
 				E2CA668325E5348200D3B0F0 /* TooltipObjcViewController.m in Sources */,
@@ -1574,7 +1691,6 @@
 				CEA2960925128CAB00FB625F /* TextFieldsCodeViewController.swift in Sources */,
 				F09C4F082551BC99005621F8 /* ListViewController.swift in Sources */,
 				F8249D0524ABC9AD002A6456 /* RadioButtonRouter.swift in Sources */,
-				F899354124A0DA98004BC82D /* AndesCheckboxShowcaseViewController.swift in Sources */,
 				023ADCE324ACC2930076C3F3 /* ThumbnailRouter.swift in Sources */,
 				90530B11242BFD15005E056A /* BadgeViewController.swift in Sources */,
 				9CD1071D23EDF3A90081232D /* UIView+Additions.swift in Sources */,
@@ -1601,7 +1717,6 @@
 				F85E051E24AF68150059C6FA /* RadioButtonObjCViewController.m in Sources */,
 				90F4781F243534F0001CEC90 /* BadgeObjCViewController.m in Sources */,
 				8617BD172499B5860071319C /* SnackbarRouter.swift in Sources */,
-				90530B0B242BFAA7005E056A /* AndesBadgeShowcaseViewController.swift in Sources */,
 				6A186A6923AC0FBB00420556 /* ButtonsViewController.swift in Sources */,
 				9CE1130223D20BF40017B770 /* MessageObjCViewController.m in Sources */,
 				E662DEB1254B300900A86D10 /* BottomSheetRouter.swift in Sources */,
@@ -1643,7 +1758,6 @@
 				F08720892559D42D00D54768 /* Randoms.swift in Sources */,
 				E662DEB6254B308D00A86D10 /* BottomSheetObjectiveCExampleViewController.m in Sources */,
 				86A1E3042481599500B59D1D /* TagRouter.swift in Sources */,
-				86A1E30824815A1700B59D1D /* AndesTagShowcaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

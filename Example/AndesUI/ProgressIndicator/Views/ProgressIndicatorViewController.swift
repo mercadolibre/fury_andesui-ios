@@ -21,11 +21,6 @@ class ProgressIndicatorViewController: UIViewController {
     @IBOutlet weak var progressIndicatorMediumWithoutText: AndesProgressIndicatorIndeterminate!
     @IBOutlet weak var progressIndicatorXSmallWithoutText: AndesProgressIndicatorIndeterminate!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupObjcCase()
-    }
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         startAnimation()
@@ -58,20 +53,5 @@ class ProgressIndicatorViewController: UIViewController {
         progressIndicatorSmallWithoutText.stopAnimation()
         progressIndicatorMediumWithoutText.stopAnimation()
         progressIndicatorXSmallWithoutText.stopAnimation()
-    }
-    private func setupObjcCase() {
-        let rightButton = UIBarButtonItem(
-            image: nil,
-            style: .plain,
-            target: self,
-            action: #selector(objcCasesButtonTapped)
-        )
-        rightButton.title = "Objc Example"
-        navigationItem.rightBarButtonItem = rightButton
-    }
-
-    @objc func objcCasesButtonTapped() {
-        let controller = ProgressIndicatorObjcViewController()
-        navigationController?.pushViewController(controller, animated: true)
     }
 }

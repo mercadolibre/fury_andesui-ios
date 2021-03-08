@@ -11,7 +11,7 @@ import Foundation
 class RadioButtonRouter: HomeRouterProtocol {
     func route(from: UIViewController) {
         let viewController = AndesShowcasePageViewController(controllers: [AndesRadioButtonViewController(), RadioButtonObjCViewController()])
-        viewController.title = "Andes RadioButton"
+        viewController.title = "AndesRadioButton"
         from.navigationController?.pushViewController(viewController, animated: true)
     }
 }

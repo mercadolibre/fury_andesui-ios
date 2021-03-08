@@ -8,6 +8,8 @@
 
 class AndesBadgeExtensionRouter: HomeRouterProtocol {
     func route(from: UIViewController) {
-        from.navigationController?.pushViewController(AndesBadgeExtensionTabBarController(), animated: true)
+        let viewController = AndesShowcasePageViewController(controllers: [AndesBadgeExtensionTabBarController()])
+        viewController.title = "AndesBadgeInTabBar"
+        from.navigationController?.pushViewController(viewController, animated: true)
     }
 }

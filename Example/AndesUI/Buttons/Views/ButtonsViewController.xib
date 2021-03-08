@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,6 +28,7 @@
                 <outlet property="smallLoudAndesButton" destination="i8P-o4-mBn" id="xUV-R5-JOl"/>
                 <outlet property="smallQuietAndesButton" destination="LMK-ia-5Pl" id="npU-qJ-SbS"/>
                 <outlet property="smallTransparentAndesButton" destination="6pi-dT-BIv" id="dbu-uS-6qs"/>
+                <outlet property="switchStateLabel" destination="yQx-tY-VkM" id="jV6-bm-Tea"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="largeWithSpinnerAndesButton" destination="vsi-Fu-xhn" collectionClass="NSMutableArray" id="eCv-WZ-n0x"/>
                 <outletCollection property="largeWithSpinnerAndesButton" destination="5r7-rX-duF" collectionClass="NSMutableArray" id="jcR-Kt-EJM"/>
@@ -49,30 +50,47 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wDE-v4-MhS">
-                            <rect key="frame" x="16" y="16" width="240" height="3778"/>
+                            <rect key="frame" x="16" y="16" width="240" height="3817"/>
                             <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="KHd-sQ-l2H">
+                                    <rect key="frame" x="0.0" y="0.0" width="190.5" height="31"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disabled Spinner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQx-tY-VkM">
+                                            <rect key="frame" x="0.0" y="0.0" width="129.5" height="31"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZRx-h6-N6Z">
+                                            <rect key="frame" x="141.5" y="0.0" width="51" height="31"/>
+                                            <connections>
+                                                <action selector="ChangeSpinnerState:" destination="-1" eventType="valueChanged" id="yZZ-oW-HSv"/>
+                                            </connections>
+                                        </switch>
+                                    </subviews>
+                                </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BN5-Qq-5CX" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="39" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="text" value="Default"/>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HU6-0n-HCp" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="136" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="175" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="text" value="Default disabled"/>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Large" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KgU-16-zgy">
-                                    <rect key="frame" x="0.0" y="272" width="43.5" height="20.5"/>
+                                    <rect key="frame" x="0.0" y="311" width="43.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RYZ-hf-vha" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="300.5" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="339.5" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <accessibility key="accessibilityConfiguration" identifier="buttons"/>
                                     <userDefinedRuntimeAttributes>
@@ -82,7 +100,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xXQ-B1-VXo" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="436.5" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="475.5" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="ibSize" value="large"/>
@@ -91,7 +109,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HFv-cm-KdO" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="572.5" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="611.5" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="text" value="Large Quiet"/>
@@ -100,7 +118,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vsi-Fu-xhn" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="708.5" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="747.5" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="ibSize" value="large"/>
@@ -109,7 +127,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NkD-UK-tfh" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="844.5" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="883.5" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="text" value="Large Transparent"/>
@@ -118,7 +136,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5r7-rX-duF" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="980.5" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="1019.5" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="ibSize" value="large"/>
@@ -127,34 +145,34 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Large with Icon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34P-Du-p7q">
-                                    <rect key="frame" x="0.0" y="1116.5" width="116" height="20.5"/>
+                                    <rect key="frame" x="0.0" y="1155.5" width="116" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7GW-kE-ZR2" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="1145" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="1184" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="text" value="Large Loud Right Icon"/>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="po8-If-SrA" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="1281" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="1320" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="text" value="Large Loud Right Icon"/>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4G1-61-GWQ" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="1417" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="1456" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="text" value="Large Loud Left Icon"/>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCt-nb-9PY" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="1553" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="1592" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="text" value="Large Quiet Right Icon"/>
@@ -162,7 +180,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="urJ-TK-ZXN" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="1689" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="1728" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="text" value="Large Quiet Left Icon"/>
@@ -170,7 +188,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lRI-L7-kZY" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="1825" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="1864" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="text" value="Large Transparent Left Icon"/>
@@ -178,7 +196,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hnj-TR-z5F" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="1961" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="2000" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="text" value="Large Transparente Right Icon"/>
@@ -186,13 +204,13 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zjr-an-sfo">
-                                    <rect key="frame" x="0.0" y="2097" width="61.5" height="20.5"/>
+                                    <rect key="frame" x="0.0" y="2136" width="61.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rjh-xa-mKr" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="2125.5" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="2164.5" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="text" value="Medium Loud"/>
@@ -200,7 +218,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ete-Hq-xgl" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="2261.5" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="2300.5" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="ibSize" value="MEDIUM"/>
@@ -209,7 +227,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GwF-pf-pIg" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="2397.5" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="2436.5" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="ibHierarchy" value="QUIET"/>
@@ -218,7 +236,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0FP-aH-gbX" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="2533.5" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="2572.5" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="ibSize" value="MEDIUM"/>
@@ -227,7 +245,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OLj-26-5p1" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="2669.5" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="2708.5" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="text" value="Medium Transparent"/>
@@ -236,7 +254,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ZN-mV-g5K" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="2805.5" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="2844.5" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="ibSize" value="MEDIUM"/>
@@ -245,13 +263,13 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Small" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cU-Fb-N7p">
-                                    <rect key="frame" x="0.0" y="2941.5" width="41.5" height="20.5"/>
+                                    <rect key="frame" x="0.0" y="2980.5" width="41.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8P-o4-mBn" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="2970" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="3009" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="text" value="Small Loud"/>
@@ -259,7 +277,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyZ-cZ-1HM" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="3106" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="3145" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="ibSize" value="small"/>
@@ -268,7 +286,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMK-ia-5Pl" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="3242" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="3281" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="ibSize" value="small"/>
@@ -277,7 +295,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j65-6w-KHY" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="3378" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="3417" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="ibSize" value="small"/>
@@ -286,7 +304,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6pi-dT-BIv" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="3514" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="3553" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <accessibility key="accessibilityConfiguration" identifier="smallTransparent"/>
                                     <userDefinedRuntimeAttributes>
@@ -296,7 +314,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LN0-mX-1Fq" customClass="AndesButton" customModule="AndesUI">
-                                    <rect key="frame" x="0.0" y="3650" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="3689" width="240" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="ibSize" value="small"/>
@@ -325,5 +343,11 @@
             </constraints>
             <point key="canvasLocation" x="100" y="110"/>
         </view>
+        <stackView opaque="NO" contentMode="scaleToFill" id="TsM-gs-6ll">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <viewLayoutGuide key="safeArea" id="yDS-mL-atT"/>
+            <point key="canvasLocation" x="-148" y="-271"/>
+        </stackView>
     </objects>
 </document>

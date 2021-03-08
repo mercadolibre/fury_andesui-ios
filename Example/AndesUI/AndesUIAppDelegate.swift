@@ -9,6 +9,7 @@
 import UIKit
 import AndesUI
 import IQKeyboardManagerSwift
+import Firebase
 
 @UIApplicationMain
 class AndesUIAppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,6 +32,8 @@ class AndesUIAppDelegate: UIResponder, UIApplicationDelegate {
         if #available(iOS 13.0, *) {
             window?.overrideUserInterfaceStyle = .light
         }
+
+        FirebaseApp.configure()
 
         return true
     }

@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[self view] setBackgroundColor:[UIColor whiteColor]];
-    
+    self.title = @"BottomSheetObjectiveCExampleViewController";
     AndesButton* button = [[AndesButton alloc] initWithText:@"Open Andes Button Demo"
                                                   hierarchy:AndesButtonHierarchyLoud
                                                        size:AndesButtonSizeLarge

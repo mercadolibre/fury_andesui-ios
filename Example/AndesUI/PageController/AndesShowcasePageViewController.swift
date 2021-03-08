@@ -18,6 +18,8 @@ class AndesShowcasePageViewController: UIViewController {
 
     var pageController: UIPageViewController!
 
+    let analyticsHelper = AnalyticsHelper()
+
     init(controllers: [UIViewController]) {
         self.controllers = controllers
         super.init(nibName: "AndesShowcasePageViewController", bundle: nil)
@@ -52,14 +54,33 @@ class AndesShowcasePageViewController: UIViewController {
         setupPageController()
         containerView.bringSubview(toFront: pageControl)
         setupPageControl()
+
         if #available(iOS 11.0, *) {} else {
-            //iOS <= 10 fix https://forums.developer.apple.com/thread/87329
+            // iOS <= 10 fix https://forums.developer.apple.com/thread/87329
             guard let topBarHeight = self.navigationController?.navigationBar.frame.height else {
                 return
             }
             let padding: CGFloat = 15
             topConstraint.constant = padding + topBarHeight
         }
+
+        guard
+            let componentName = self.title ,
+            let firstControllerName = (controllers.first?.nibName != nil ) ? controllers.first?.nibName : controllers.first?.title
+        else { return }
+
+//        print("\(String(describing: firstControllerName)) in \(componentName)")
+        analyticsHelper.startTimer(view: firstControllerName, for: componentName)
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        guard
+            let componentName = self.title ,
+            let currentVc = (controllers.first?.nibName != nil ) ? controllers.first?.nibName : controllers.first?.title
+        else { return }
+
+        analyticsHelper.pauseTimer(view: currentVc, and: componentName)
+        analyticsHelper.stopTimer(component: componentName)
     }
 }
 
@@ -78,5 +99,16 @@ extension AndesShowcasePageViewController: UIPageViewControllerDataSource, UIPag
         guard completed else {return}
         let current = controllers.index(of: (pageViewController.viewControllers?.first!)!)!
         pageControl.currentPage = current
+
+        guard let firstControllerName = controllers.first?.nibName,
+              let componentName = self.title else { return }
+        analyticsHelper.pauseTimer(view: firstControllerName, and: componentName)
+
+        let pageContentViewController = pageViewController.viewControllers!.first!
+
+        guard let currentController = pageContentViewController.nibName else { return }
+
+        analyticsHelper.startTimer(view: currentController, for: componentName)
+        print("\(String(describing: pageContentViewController.nibName!)) in \(componentName)")
     }
 }
