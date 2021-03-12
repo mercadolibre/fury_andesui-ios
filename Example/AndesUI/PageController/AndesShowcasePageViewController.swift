@@ -79,12 +79,16 @@ class AndesShowcasePageViewController: UIViewController {
             let padding: CGFloat = 15
             topConstraint.constant = padding + topBarHeight
         }
-
-        manageEventTimerWith(action: .start)
     }
 
-    override func viewDidDisappear(_ animated: Bool) {
-        manageEventTimerWith(action: .stop)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        guard
+            let componentName = self.title,
+            let currentVc = (controllers.first?.nibName != nil ) ? controllers.first?.nibName : controllers.first?.title else { return }
+
+        analyticsHelper.createPathWith(componentName, view: currentVc)
     }
 }
 
@@ -107,8 +111,8 @@ extension AndesShowcasePageViewController: UIPageViewControllerDataSource, UIPag
         guard let firstControllerName = controllers.first?.nibName,
               let pageContentViewController = pageViewController.viewControllers!.first,
               let currentController = pageContentViewController.nibName else { return }
-
-        manageEventTimerWith(action: .pause, for: firstControllerName)
-        manageEventTimerWith(action: .start, for: currentController)
+        print(firstControllerName)
+        print(currentController)
+        analyticsHelper.createPathWith(self.title ?? "component", view: currentController)
     }
 }

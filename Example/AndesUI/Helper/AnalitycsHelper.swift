@@ -15,12 +15,57 @@ enum TimerAction {
     case stop
 }
 
+enum ScreenTypeEvent: String {
+    case dynamicScreen = "dynamic"
+    case staticScreem = "static"
+}
+
 class AnalyticsHelper {
 
     private var screensAndTimers =  [String: Date]()
     private var componentsDates = [String: [String: Date]]()
     private var screensAndSeconds = [String: TimeInterval]()
     private var componentsSeconds = [String: [String: TimeInterval]]()
+
+    private var viewAndPath: [String: String] = [
+        "TooltipObjcViewController": "",
+        "TooltipViewController": "'\'dynamic",
+        "AndesBadgeExtensionTabBarController": "'\'dynamic",
+        "CoachmarkViewController": "'\'dynamic",
+        "CoachmarkObjCViewController": "'\'static",
+        "BottomSheetSwiftExampleViewController": "'\'static",
+        "ButtonsViewController": "'\'static",
+        "MessageViewController": "'\'dynamic",
+        "MessageObjCViewController": "'\'static",
+        "TextFieldViewController": "'\'dynamic",
+        "TextAreaViewController": "'\'dynamic",
+        "TextFieldObjCViewController": "'\'static",
+        "TextFieldsCodeViewController": "'\'dynamic",
+        "TextFieldsCodeObjCViewController": "'\'dynamic",
+        "AndesRadioButtonViewController": "''\'radiobutton\'dynamic",
+        "RadioButtonObjCViewController": "''\'radiobutton'\'static",
+        "BadgeViewController": "'\'static",
+        "BadgeObjCViewController": "'\'dynamic",
+        "AndesCheckboxInitViewController": "'\'dynamic",
+        "CheckboxObjCViewController": "'\'static",
+        "AndesCheckboxViewController": "'\'static",
+        "TagViewController": "'\'dynamic",
+        "TagObjCViewController": "'\'static",
+        "TagChoiceObjCViewController": "'\'static",
+        "SnackbarViewController": "'\'dynamic",
+        "SnackbarObjCViewController": "'\'static",
+        "CardViewController": "'\'dynamic",
+        "CardObjCViewController": "'\'static",
+        "DatePickerViewController": "'\'dynamic",
+        "ThumbnailViewController": "'\'static",
+        "ThumbnailObjCViewController": "'\'static",
+        "ListViewController": "'\'dynamic",
+        "ListObjcViewController": "'\'static",
+        "DropdownViewController": "\'dynamic",
+        "DropDownObjcViewController": "\'dynamic",
+        "BadgeViewController": "\'dynamic",
+        "BadgeObjCViewController": "'\'static"
+    ]
 
     func startTimer(view: String?, for component: String) {
         screensAndTimers[view ?? AnalyticsEventScreenView] = Date()
@@ -63,5 +108,18 @@ class AnalyticsHelper {
 
     func sendTrack(component: String, viewsAndSeconds: [String: TimeInterval]) {
         Analytics.logEvent(component, parameters: viewsAndSeconds)
+    }
+
+    func createPathWith(_ component: String, view: String, variation: String? = nil) {
+
+        guard let path = viewAndPath[view] else {return}
+
+        sendNewTrack(component: component, path: path)
+    }
+
+    func sendNewTrack(component: String, path: String) {
+        Analytics.logEvent(AnalyticsEventScreenView,
+                           parameters: [AnalyticsParameterScreenName: path,
+                                        AnalyticsParameterScreenClass: component])
     }
 }
